@@ -1,0 +1,15 @@
+function askAI() {
+
+    let question = document.getElementById("question").value.toLowerCase();
+
+    let answer = "Sorry, I don't know about that yet.";
+
+    for (let key in knowledge) {
+        if (question.includes(key)) {
+            answer = knowledge[key];
+            break;
+        }
+    }
+
+    document.getElementById("answer").innerHTML = answer;
+}
